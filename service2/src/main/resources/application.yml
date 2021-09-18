@@ -1,6 +1,21 @@
 server:
   port: 8002
+  servlet:
+    context-path: /service2
 
 spring:
   application:
     name: service2
+  datasource:
+    username: root
+    password: sangda@123
+    url: jdbc:mysql://10.11.2.30:3306/skywalking_demo?useUnicode=true&characterEncoding=utf8&&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.skywalking.demo.entity.UserVO
+logging:
+  level:
+    com.skywalking.demo.mapper: debug

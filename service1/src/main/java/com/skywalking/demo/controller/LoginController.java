@@ -18,7 +18,7 @@ public class LoginController {
     @GetMapping("/login")
     public String login(String username, String password) {
         // invoke B
-        String url = "http://localhost:8002/login?username="+username + "&&password=" + password;
+        String url = "http://localhost:8002/service2/login?username="+username + "&&password=" + password;
         String response = restTemplate.getForObject(url, String.class);
         return response;
     }
